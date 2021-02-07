@@ -43,7 +43,7 @@ const letsgo = () => {
   
 
   // add url to the tag
-  document.querySelector('.link').innerHTML = "main.html?"+"m="+document.querySelector('.msg').value+"&"+"zpw=zpdskfdsffjklejzikwenkejwknoq"+"&"+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+"&"+"rn="+document.querySelector('.receivername').value+"&"+"cn="+document.querySelector('.creatorname').value;
+  document.querySelector('.link').innerHTML = "wish.html?"+"m="+document.querySelector('.msg').value+"&"+"zpw=zpdskfdsffjklejzikwenkejwknoq"+"&"+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+"&"+"rn="+document.querySelector('.receivername').value+"&"+"cn="+document.querySelector('.creatorname').value;
   
   //set href of view btn to the link's value with the &amp; converted to &
   document.querySelector('.view').setAttribute('href', document.querySelector('.link').innerHTML.replace(/&amp;/g, '&'));
