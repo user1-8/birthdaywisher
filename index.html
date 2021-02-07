@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/allinclude.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Redressed&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+
+</head>
+<body>
+  
+  <div class="page-transition"></div>
+
+  <div class="supports">
+    <div class="support1"></div>
+    <div class="support2"></div>
+    <div class="support3"></div>
+    <div class="support4"></div>
+    <div class="support5"></div>
+    <div class="support6"></div>
+    <div class="support7"></div>
+    <div class="support8"></div>
+    <div class="support9"></div>
+    <div class="support10"></div>
+  </div>
+
+  <div class="wrapper">
+  
+    <div class="title">
+      <h2>Welcome to</h2>
+      <h1>Birthde</h1>
+    </div>
+
+    <div class="tagline">
+      <div class="written">
+        Let's wish someone a birthday they haven't been wished with yet!
+      </div>
+      
+      <form>
+        <span style="color:rgba(0,0,0, .3)">All fields are mandatory</span>
+        <div class="two_wrapper">
+          <div class="first">
+            <input type="text" placeholder="Name of Person" class="name receivername"  onkeyup="enable_btn()">
+            <div class="select_wrapper">
+              <select name="" id="monthselector" onchange="editDates(this); enable_btn();">
+                <option value=""> Select Month </option>
+                <option value="1"> Jan (01) </option>
+                <option value="2"> Feb (02) </option>
+                <option value="3"> Mar (03) </option>
+                <option value="4"> Apr (04) </option>
+                <option value="5"> May (05) </option>
+                <option value="6"> June (06) </option>
+                <option value="7"> July (07) </option>
+                <option value="8"> Aug (08) </option>
+                <option value="9"> Sept (09) </option>
+                <option value="10"> Oct (10) </option>
+                <option value="11"> Nov (11) </option>
+                <option value="12"> Dec (12) </option>
+              </select>
+            </div>
+            <div class="select_wrapper">
+              <select name="" id="dateselector" onchange="enable_btn()">
+                <option value=""> Select Date </option>
+                <option value="01"> 01 </option>
+                <option value="02"> 02 </option>
+                <option value="03"> 03 </option>
+                <option value="04"> 04 </option>
+                <option value="05"> 05 </option>
+                <option value="06"> 06 </option>
+                <option value="07"> 07 </option>
+                <option value="08"> 08 </option>
+                <option value="09"> 09 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                <option value="13"> 13 </option>
+                <option value="14"> 14 </option>
+                <option value="15"> 15 </option>
+                <option value="16"> 16 </option>
+                <option value="17"> 17 </option>
+                <option value="18"> 18 </option>
+                <option value="19"> 19 </option>
+                <option value="20"> 20 </option>
+                <option value="21"> 21 </option>
+                <option value="22"> 22 </option>
+                <option value="23"> 23 </option>
+                <option value="24"> 24 </option>
+                <option value="25"> 25 </option>
+                <option value="26"> 26 </option>
+                <option value="27"> 27 </option>
+                <option value="28"> 28 </option>
+                <option value="29"> 29 </option>
+                <option value="30"> 30 </option>
+                <option value="31"> 31 </option>
+              </select>
+            </div>
+          </div>
+          <div class="second">
+            <input type="text" placeholder="Your Name" class="name creatorname"  onkeyup="enable_btn()">
+            <textarea class="msg" placeholder="Personal Message for the person..." onkeyup="enable_btn()"></textarea>
+          </div>
+        </div>
+        <br>
+        <button type="button" onclick="letsgo()" disabled id="btn_go">
+          <div class="skewed"></div>
+          Let's go 
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </button>
+      </form>
+
+      <footer><span class="emoji">😊</span></footer>
+
+
+      <div class="result_wrapper">
+        <div class="result">
+          <div class="close_wrapper">
+            <h4>Link Generated!</h4>
+            <button class="close" onclick="closeResult()">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <textarea readonly rows="1" class="link"></textarea>
+          <div class="btns">
+            <a href="" target="_blank" class="btn view"> View <i class="fas fa-external-link-alt"></i> </a>
+            <button class="btn"onclick="copyLink(this)"> Copy <i class="far fa-copy"></i> </button>
+          </div>
+          <a href="" class="whatsapp_share">
+            <div class="content">
+              <i class="fab fa-whatsapp"></i>
+              Wish on Whatsapp
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
