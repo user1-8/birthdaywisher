@@ -49,7 +49,7 @@ const letsgo = () => {
   document.querySelector('.view').setAttribute('href', document.querySelector('.link').innerHTML.replace(/&amp;/g, '&'));
 
   // set href of whatsapp anchor tag
-  document.querySelector('.whatsapp_share').setAttribute('href', 'adf');
+  document.querySelector('.whatsapp_share').setAttribute('href', 'whatsapp://send?text=abc');
   
   // show result
   setTimeout(function(){
