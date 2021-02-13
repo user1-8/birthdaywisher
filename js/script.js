@@ -43,8 +43,8 @@ const letsgo = () => {
   
 
   // add url to the tag
-  var urlVarSeparator = '&#38;'+'&#97;'+'&#109;'+'&#112;'+'&#59';
-  
+  var urlVarSeparator = '&'+'&#97;'+'&#109;'+'&#112;'+'&#59';
+
   document.querySelector('.link').innerHTML = encodeURI("https://user1-8.github.io/birthdaywisher/wish.html?"+"m="+document.querySelector('.msg').value+urlVarSeparator+"zpw=9f12aab23cd9ffd22b209bc90da2d"+urlVarSeparator+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+urlVarSeparator+"rn="+document.querySelector('.receivername').value+urlVarSeparator+"cn="+document.querySelector('.creatorname').value);
   
   //set href of view btn to the link's value
