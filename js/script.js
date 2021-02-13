@@ -43,9 +43,9 @@ const letsgo = () => {
   
 
   // add url to the tag
-  document.querySelector('.link').innerHTML = encodeURI("https://user1-8.github.io/birthdaywisher/wish.html?"+"m="+document.querySelector('.msg').value+"&"+"zpw=9f12aab23cd9ffd22b209bc90da2d"+"&"+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+"&"+"rn="+document.querySelector('.receivername').value+"&"+"cn="+document.querySelector('.creatorname').value);
+  document.querySelector('.link').innerHTML = encodeURI("https://user1-8.github.io/birthdaywisher/wish.html?"+"m="+document.querySelector('.msg').value+"&amp;"+"zpw=9f12aab23cd9ffd22b209bc90da2d"+"&amp;"+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+"&amp;"+"rn="+document.querySelector('.receivername').value+"&amp;"+"cn="+document.querySelector('.creatorname').value);
   
-  //set href of view btn to the link's value with the &amp; converted to &
+  //set href of view btn to the link's value
   document.querySelector('.view').setAttribute('href', document.querySelector('.link').innerHTML);
 
   // set href of whatsapp anchor tag
