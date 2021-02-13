@@ -43,13 +43,13 @@ const letsgo = () => {
   
 
   // add url to the tag
-  document.querySelector('.link').innerHTML = "wish.html?"+"m="+document.querySelector('.msg').value+"&"+"zpw=zpdskfdsffjklejzikwenkejwknoq"+"&"+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+"&"+"rn="+document.querySelector('.receivername').value+"&"+"cn="+document.querySelector('.creatorname').value;
+  document.querySelector('.link').innerHTML = encodeURI("https://user1-8.github.io/birthdaywisher/wish.html?"+"m="+document.querySelector('.msg').value+"&"+"zpw=9f12aab23cd9ffd22b209bc90da2d"+"&"+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+"&"+"rn="+document.querySelector('.receivername').value+"&"+"cn="+document.querySelector('.creatorname').value);
   
   //set href of view btn to the link's value with the &amp; converted to &
   document.querySelector('.view').setAttribute('href', document.querySelector('.link').innerHTML);
 
   // set href of whatsapp anchor tag
-  document.querySelector('.whatsapp_share').setAttribute('href', 'whatsapp://send?text=Hi%20*'+document.querySelector('.receivername').value+'*%20😄,%0A%0AI%20have%20someting%20*very%20special%20for%20you*.%20😜%0A%20A%20special%20message%20is%20also%20there%20😏%20*written%20by%20me*.%20%0ACheck%20it%20out%20below%20😁😁%0A%0A👉'+ encodeURIComponent("https://user1-8.github.io/birthdaywisher/"+document.querySelector('.link').innerHTML));
+  document.querySelector('.whatsapp_share').setAttribute('href', 'whatsapp://send?text=Hi%20*'+document.querySelector('.receivername').value+'*%20😄,%0A%0AI%20have%20someting%20*very%20special%20for%20you*.%20😜%0A%20A%20special%20message%20is%20also%20there%20😏%20*written%20by%20me*.%20%0ACheck%20it%20out%20below%20😁😁%0A%0A👇👇👇%0A'+document.querySelector('.link').innerHTML);
   
   // show result
   setTimeout(function(){
