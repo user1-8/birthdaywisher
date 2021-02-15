@@ -51,7 +51,7 @@ const letsgo = () => {
   document.querySelector('.view').setAttribute('href', document.querySelector('.link').innerHTML.replace(/&amp;/g, '&'));
 
   // set href of whatsapp anchor tag
-  document.querySelector('.whatsapp_share').setAttribute('href', 'whatsapp://send?text=Hi%20*'+document.querySelector('.receivername').value+'*%20😄,%0A%0AI%20have%20someting%20*very%20special%20for%20you*.%20😜%0A%20A%20special%20message%20is%20also%20there%20😏%20*written%20by%20me*.%20%0ACheck%20it%20out%20below%20😁😁%0A%0A👇👇👇%0A'+ encodeURI(document.querySelector('.link').innerHTML.replace(/&amp;/g, '&')));
+  document.querySelector('.whatsapp_share').setAttribute('href', 'whatsapp://send?text=Hi%20*'+document.querySelector('.receivername').value+'*%20😄,%0A%0AI%20have%20someting%20*very%20special%20for%20you*.%20😜%0A%20A%20special%20message%20is%20also%20there%20😏%20*written%20by%20me*.%20%0ACheck%20it%20out%20below%20😁😁%0A%0A👇👇👇%0A'+ encodeURIComponent(document.querySelector('.link').innerHTML.replace(/&amp;/g, '&')));
   
   // show result
   setTimeout(function(){
