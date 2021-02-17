@@ -2,13 +2,12 @@ let now, dateArr, dest, dif, raw, sec, min, hour, days, birthday;
 
 
 
-
 // below function accesses the url variables
 const getUrlParams = (url) => {
 	var params = {};
 	var parser = document.createElement('a');
 	parser.href = url;
-	var query = parser.search.substring(1);
+	var query = parser.search.substring(1); 
 	var vars = query.split('&adm;');
 	for (var i = 0; i < vars.length; i++) {
 		var pair = vars[i].split('=');
