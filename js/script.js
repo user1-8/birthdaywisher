@@ -46,7 +46,7 @@ const letsgo = () => {
   let urlfirst;
 
   if(window.location.host == "") urlfirst = window.location.protocol+"//"+window.location.pathname.replace("/", "").replace('index.html', 'wish.html');
-  else urlfirst = window.location.protocol + "//" + window.location.host + window.location.pathname;
+  else urlfirst = window.location.protocol + "//" + window.location.host + '/birthdaywisher/wish.html';
 
   document.querySelector('.link').innerHTML = encodeURI(urlfirst + "?m="+document.querySelector('.msg').value+'&adm;'+"zpw=9f12aab23cd9ffd22b209bc90da2d"+'&adm;'+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+'&adm;'+"rn="+document.querySelector('.receivername').value+'&adm;'+"cn="+document.querySelector('.creatorname').value);
 
