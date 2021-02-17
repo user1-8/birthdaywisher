@@ -68,7 +68,13 @@
 
 	<script src="js/script1.js"></script>
 	<script src="js/allinclude.js"></script>
-	<script src="confetti.min.js"></script><script>confetti.start();</script>
+	<script src="confetti.min.js"></script>
+	<script>
+		confetti.start();
+		setTimeout(function(){
+			confetti.stop()
+		}, 6000);
+	</script>
 	
 </body>
 </html>
