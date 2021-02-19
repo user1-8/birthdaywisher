@@ -1,6 +1,28 @@
 let now, dateArr, dest, dif, raw, sec, min, hour, days, birthday;
 
 
+function viewWishClicked(){
+
+  // show everything else
+  document.querySelector('#viewWish').setAttribute('style', 'animation: none;');
+  setTimeout(function(){
+    document.querySelector('#viewWish').setAttribute('style', 'animation: none; transform: scale(1.5); opacity: 0;');
+  },100);
+  setTimeout(function(){
+    document.querySelector('.coverer').setAttribute('style', 'transform: translateX(110%)');
+    
+    // play audio
+    document.getElementById("myAudio").play();
+
+    confetti.start();
+		setTimeout(function(){
+			confetti.alpha = 0.7;
+		}, 5000);
+
+  },800);
+
+}
+
 
 // below function accesses the url variables
 const getUrlParams = (url) => {
@@ -97,15 +119,3 @@ setInterval(function(){
 
 
 
-if(sessionStorage.getItem('dfs') == null){
-  setTimeout(function(){
-
-    document.querySelector('.page-transition').classList.add('animating-now');
-    
-    // below localstorage sets the item so that it could be accessed by another page
-    sessionStorage.setItem('dfs', 'kjkewjjjs');
-
-  }, 500);
-}else{
-  document.querySelector('.page-transition').classList.remove('page-transition');
-}

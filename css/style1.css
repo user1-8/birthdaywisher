@@ -1,3 +1,47 @@
+
+.coverer{
+	position: fixed;
+	top:0; left: 0;
+	z-index: 9999999;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #2c2c54;
+	transition: transform 1s cubic-bezier(.39,.79,.62,.22);
+}
+.coverer .content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.coverer .content #viewWish{
+	font-family: 'Stylish', sans-serif;
+	padding: 5px 20px;
+	border:none;
+	background: #706fd3;
+	color: #2c2c54;
+	font-weight: bold;
+	font-size: 1.3rem;
+	border-radius: 100px;
+	transition: .7s;
+	animation: scale .7s infinite;
+	box-shadow: 0 0 20px 0 rgba(0,0,0, .2);
+}
+@keyframes scale{
+	0%{transform: scale(1);}
+	50%{transform: scale(1.05);}
+	100%{transform: scale(1);}
+}
+.coverer .content #viewWish:focus{
+	box-shadow: 0 0 0 5px rgba(112, 111, 211, .3);
+}
+.coverer .content #viewWish i{
+	font-size: 1rem;
+	margin-left: 5px;
+}
+
 .wrapper{
 	text-align:center;
 	/* color: #BFFCF9; */
@@ -66,6 +110,10 @@
 .timer .blox .name{
 	font-size: .6rem;
 	font-weight: 400;
+}
+
+audio{
+	margin: 30px 0 0;
 }
 
 .creator_info{
