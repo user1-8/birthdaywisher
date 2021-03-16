@@ -1,5 +1,9 @@
 let now, dateArr, dest, dif, raw, sec, min, hour, days, birthday;
 
+if(window.location.host == "") document.getElementById('createNew').setAttribute('href', window.location.protocol+"//"+window.location.pathname.replace("/", "").replace('wish.html', 'index.html'));
+
+else document.getElementById('createNew').setAttribute('href', window.location.protocol + "//" + window.location.host + '/birthdaywisher');
+
 
 function viewWishClicked(){
   
@@ -142,12 +146,3 @@ if(daysNum.innerHTML<=0 && hourNum.innerHTML<=0 && minNum.innerHTML<=0 && secNum
 }
 
 
-
-// animation on page-scroll
-
-// var waypoint = new Waypoint({
-//   element: document.getElementById('new-operator'),
-//   handler: function(direction) {
-//     notify(this.id + ' hit')
-//   }
-// })
