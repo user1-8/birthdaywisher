@@ -4,7 +4,11 @@ const dateselector = document.getElementById('dateselector');
 
 // below function is for closing the result
 function closeResult(){
-  document.querySelector('.result_wrapper').setAttribute('style', 'opacity:0; pointer-events: none;');
+  document.querySelector('.result').classList.remove('animate__bounceIn');
+  document.querySelector('.result').classList.add('animate__bounceOut');
+  // setTimeout(function(){
+    document.querySelector('.result_wrapper').setAttribute('style', 'opacity:0; pointer-events: none;');
+  // },300);
 }
 
 
@@ -33,14 +37,19 @@ function copyLink(r){
 }
 
 
+function NumIsNegative(num){
+  return (num == 0) ? false : (num > 0 ? false : true);
+}
+
 
 // below is onsubmit btn click
 const letsgo = () => {
-  
-  setTimeout(function(){
-    //document.querySelector('.page-transition').classList.add('animating-now');
-  }, 900);
-  
+
+  let bdayDate = new Date(new Date().getFullYear(), document.getElementById('monthselector').value-1, document.getElementById('dateselector').value);
+
+  let nowDate = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+
+  let year=(NumIsNegative(bdayDate.getTime()-nowDate.getTime()))?((nowDate.getFullYear())+1):(nowDate.getFullYear());
 
   // add url to the tag
   let urlfirst;
@@ -48,7 +57,7 @@ const letsgo = () => {
   if(window.location.host == "") urlfirst = window.location.protocol+"//"+window.location.pathname.replace("/", "").replace('index.html', 'wish.html');
   else urlfirst = window.location.protocol + "//" + window.location.host + '/birthdaywisher/wish.html';
 
-  document.querySelector('.link').innerHTML = encodeURI(urlfirst + "?m="+document.querySelector('.msg').value+'&adm;'+"zpw=9f12aab23cd9ffd22b209bc90da2d"+'&adm;'+"d=2021-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+'&adm;'+"rn="+document.querySelector('.receivername').value+'&adm;'+"cn="+document.querySelector('.creatorname').value);
+  document.querySelector('.link').innerHTML = encodeURI(urlfirst + "?m="+document.querySelector('.msg').value+'&adm;'+"zpw=9f12aab23cd9ffd22b209bc90da2d"+'&adm;'+"d="+year+"-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+'&adm;'+"rn="+document.querySelector('.receivername').value+'&adm;'+"cn="+document.querySelector('.creatorname').value);
 
   console.log(document.querySelector('.link').innerHTML);
   
@@ -60,8 +69,10 @@ const letsgo = () => {
   
   // show result
   setTimeout(function(){
+    document.querySelector('.result').classList.remove('animate__bounceOut');
+    document.querySelector('.result').classList.add('animate__bounceIn');
     document.querySelector('.result_wrapper').setAttribute('style', 'opacity:1; pointer-events: auto;');
-  }, 300);
+  }, 500);
 
 }
 

@@ -9,7 +9,7 @@
 	align-items: center;
 	justify-content: center;
 	background: #2c2c54;
-	transition: transform 1s cubic-bezier(.39,.79,.62,.22);
+	transition: transform 2s cubic-bezier(.39,.79,.62,.22);
 }
 .coverer .content{
 	display: flex;
@@ -31,7 +31,7 @@
 }
 @keyframes scale{
 	0%{transform: scale(1);}
-	50%{transform: scale(1.05);}
+	50%{transform: scale(1.01);}
 	100%{transform: scale(1);}
 }
 .coverer .content #viewWish:focus{
@@ -114,6 +114,64 @@
 
 audio{
 	margin: 30px 0 0;
+	outline: none;
+}
+
+.bdayImages{
+	position: relative;
+	margin-bottom: 40px;
+}
+.bdayImages_overlay{
+	position: absolute;
+	top:0; left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 5px 18px;
+	width: 17rem;
+	max-width: 91vw;
+	height: calc(100% + 20px);
+	background: rgba(255,255,255, .2);
+	border-radius: 10px;
+	font-family: 'Montserrat', sans-serif;
+	word-spacing: 2px;
+	font-size: 1.3rem;
+	font-weight: 500;
+	color:#46467e;
+}
+.bdayImages_overlay .note{
+font-size: 1rem;
+}
+.showImg{
+	margin-top: 30px;
+	width: 12rem;
+	max-width: 90vw;
+}
+.bday3,.bday2{
+	border-radius: 10px;
+	width: 8em;
+	box-shadow: 0 0 20px 0 rgba(0,0,0, .3);
+}
+.bday4{
+	background: rgba(0,77,94 , .76);
+	padding: 10px;
+	border-radius: 100% 100% 30px 30px;
+	box-sizing: border-box;
+}
+.bday6{
+	max-width: 90vw;
+	width: 16rem;
+	animation: bday6 1s infinite linear;
+	margin-bottom: 50px;
+	border-radius: 10px;
+}
+@keyframes bday6{
+	0%,100%{transform:scale(1);}
+	50%{transform: scale(1.02);}
 }
 
 .creator_info{
@@ -229,5 +287,10 @@ audio{
 	}
 	.creator_info{
 		margin-top: 100px;
+	}
+}
+@media(max-width:370px){
+	#myAudio{
+		width: 85%;
 	}
 }
