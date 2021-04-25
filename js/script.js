@@ -57,7 +57,7 @@ const letsgo = () => {
   if(window.location.host == "") urlfirst = window.location.protocol+"//"+window.location.pathname.replace("/", "").replace('index.html', 'wish.html');
   else urlfirst = window.location.protocol + "//" + window.location.host + '/birthdaywisher/wish.html';
 
-  document.querySelector('.link').innerHTML = encodeURI(urlfirst + "?m="+document.querySelector('.msg').value+'&adm;'+"zpw=9f12aab23cd9ffd22b209bc90da2d"+'&adm;'+"d="+year+"-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+'&adm;'+"rn="+document.querySelector('.receivername').value+'&adm;'+"cn="+document.querySelector('.creatorname').value);
+  document.querySelector('.link').innerHTML = encodeURI(urlfirst + "?m="+document.querySelector('.msg').value+'&adm;'+"d="+year+"-"+document.getElementById('monthselector').value+"-"+document.getElementById('dateselector').value+'&adm;'+"rn="+document.querySelector('.receivername').value+'&adm;'+"cn="+document.querySelector('.creatorname').value);
 
   console.log(document.querySelector('.link').innerHTML);
   
@@ -79,8 +79,8 @@ const letsgo = () => {
 
 const enable_btn = () => {
 
-  let namerules=(/^[A-Za-z]+$/);
-  let allnameright = document.querySelector('.receivername').value.length>1 && document.querySelector('.receivername').value.match(namerules) && document.querySelector('.creatorname').value.length>1 && document.querySelector('.creatorname').value.match(namerules);
+  let namerules=(/^[A-Za-z ]+$/);
+  let allnameright = document.querySelector('.receivername').value.length>1 && document.querySelector('.receivername').value.match(namerules) && document.querySelector('.receivername').value.replace(/\s/g, '').length>0 && document.querySelector('.creatorname').value.length>1 && document.querySelector('.creatorname').value.match(namerules) && document.querySelector('.creatorname').value.replace(/\s/g, '').length>0;
 
   if(document.getElementById('dateselector').value!="" && document.getElementById('monthselector').value!="" && allnameright && document.querySelector('.msg').value.length>1){
     btn.removeAttribute('disabled', '');

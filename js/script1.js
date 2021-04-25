@@ -49,7 +49,7 @@ const getUrlParams = (url) => {
 	return params;
 };
 
-if(getUrlParams(window.location.href).m!=undefined && getUrlParams(window.location.href).zpw=="9f12aab23cd9ffd22b209bc90da2d" && getUrlParams(window.location.href).d!=undefined && getUrlParams(window.location.href).rn!=undefined && getUrlParams(window.location.href).cn!=undefined){
+if(getUrlParams(window.location.href).m!=undefined && getUrlParams(window.location.href).d!=undefined && getUrlParams(window.location.href).rn!=undefined && getUrlParams(window.location.href).cn!=undefined){
   birthday = getUrlParams(window.location.href).d;
   document.getElementById('name').innerHTML = getUrlParams(window.location.href).rn;
   document.querySelector('.byWhom .cname').innerHTML = getUrlParams(window.location.href).cn;
